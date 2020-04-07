@@ -2,13 +2,15 @@ import Base_PO from './Base_PO';
 
 class Producto_PO extends Base_PO {
     get purchaseButton(){
-        return $('#purchaseButton');
+        const purchaseButton = $('#purchaseButton');
+        return purchaseButton;
     }
     clickPurchaseButton(){
         this.purchaseButton.click();
     }
     get continuarCarritoButton(){
-        return $('#cart-buy-btn'); 
+        const cartBuyBtn = $('#cart-buy-btn');
+        return cartBuyBtn; 
     }
     clickContinuarCarritoButton(){
         this.continuarCarritoButton.click();
