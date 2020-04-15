@@ -14,12 +14,15 @@ class CompraEntrega_PO extends Base_PO {
         return $('.gb-checkout-delivery-popup-success');
     }
     clickRetiroSucursal(){
+        this.retiroSucursal.waitForDisplayed({ timeout: 3000 });
         this.retiroSucursal.click();
     }
     get seleccionarSucursal(){
         return $('.sucursal-ul-list');
     }
     clickSeleccionarSucursal(){
+        browser.takeScreenshot()
+        this.seleccionarSucursal.waitForDisplayed({ timeout: 3000 });
         this.seleccionarSucursal.click();
     }
     get continuarPickUpButton(){

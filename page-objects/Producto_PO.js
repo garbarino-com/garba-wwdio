@@ -6,6 +6,7 @@ class Producto_PO extends Base_PO {
         return purchaseButton;
     }
     clickPurchaseButton(){
+        browser.takeScreenshot()
         this.purchaseButton.click();
     }
     get continuarCarritoButton(){

@@ -9,6 +9,7 @@ var config = require('../config/main-config.js')
 describe("Flujo de compra de una Heladera con retiro en sucursal y Tarjeta de dÃ©bito", () => {
 
     it('Visitar la pagina de garbarino', function(){
+      browser.maximizeWindow()
       browser.url('/')
     })
 
@@ -19,7 +20,6 @@ describe("Flujo de compra de una Heladera con retiro en sucursal y Tarjeta de dÃ
 
     it('Seleccionamos la primera opciÃ³n', () => {
        Search_PO.clickItem()
-       browser.pause(5000)
     })
 
     it('Presionamos el boton de comprar', () => {
@@ -32,30 +32,24 @@ describe("Flujo de compra de una Heladera con retiro en sucursal y Tarjeta de dÃ
 
     it('Ingresamos el barrio, localidad o ciudad', () => {
        CompraEntrega_PO.city.setValue('Villa Crespo, Buenos Aires, Ciudad de Buenos Aires')
-       browser.pause(4000)
     })
 
     it('Seleccionamos el barrio ingresado', () => {
       CompraEntrega_PO.clickSuggestionCity()
-      browser.pause(4000)
     })
 
     it('Seleccionamos retiro en sucursal', () => {
       CompraEntrega_PO.clickRetiroSucursal()
-      browser.pause(2000)
     })
 
     it('Seleccionamos la sucursal de retiro y presionamos el boton de continuar', () => {
       CompraEntrega_PO.clickSeleccionarSucursal()
-      browser.pause(2000)
       CompraEntrega_PO.clickContinuarPickUpButton()
-      browser.pause(5000)
     })
 
     it('Seleccionamos el metodo de pago dÃ©bito', () => {
       CompraFinanciacion_PO.clickSeleccionarTarjetaDebito()
       CompraFinanciacion_PO.clickFormMetodosPago()
-      browser.pause(2000)
       CompraFinanciacion_PO.clickPresionarContinuarButtonMedioPago()
     })
 
