@@ -16,6 +16,18 @@ class CompraFinanciacion_PO extends Base_PO {
     clickSeleccionarTarjetaDebito(){
         this.seleccionarTarjetaDebito.click();
     }
+    get seleccionarTarjetaCreditoVisa(){
+        return $('#tarjeta-visa')
+    }
+    clickSeleccionarTarjetaCreditoVisa(){
+        this.seleccionarTarjetaCreditoVisa.click(); //form[@id='metodos-pago']/fieldset[@class='payment-methods']/ul/li[2]/label
+    }
+    get seleccionarVisaTodosBancos18Cuotas(){
+        return $('//form[@id="metodos-pago"]/fieldset[@class="payment-methods"]/ul/li[3]/label')
+    }
+    clickSeleccinarVisaTodosBancos18Cuotas(){
+        this.seleccionarVisaTodosBancos18Cuotas.click();
+    }
     get presionarContinuarButtonMedioPago(){
         return $('#continue');
     }
