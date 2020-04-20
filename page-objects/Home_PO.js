@@ -9,10 +9,11 @@ class Home_PO extends Base_PO {
     }
     get searchButton(){
         const search = $('.gb-search-button > img')
-        search.waitForExist({ time:5000 });
+        //search.waitForExist({ time:5000 });
         return search;
     }
     clickBuscar(){
+        this.searchButton.waitForDisplayed({ timeout: 3000 });
         this.searchButton.click();
     }
 }

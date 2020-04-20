@@ -23,20 +23,17 @@ class CompraFinanciacion_PO extends Base_PO {
         this.seleccionarTarjetaCreditoVisa.click();
     }
     get seleccionarVisaTodosBancos18Cuotas(){
-        const visa18Cuotas = $('//*[@id="metodos-pago"]/fieldset[2]/ul/li[3]/label')
+        const visa18Cuotas = $('.gb--selected')//$('//*[@id="metodos-pago"]/fieldset[2]/ul/li[3]/label')
         return visa18Cuotas;
     }
     clickSeleccinarVisaTodosBancos18Cuotas(){
+        //browser.takeScreenshot()
+        this.seleccionarVisaTodosBancos18Cuotas.waitForDisplayed({ timeout: 3000 });
         this.seleccionarVisaTodosBancos18Cuotas.click();
     }
     get cantidadCuotas() {
-        const cuotas = $('/html/body/main/div/div[1]/section[2]/div/form/fieldset[5]/div/div[1]/select/option[2]');
+        const cuotas = $('.gb-select');
         return cuotas;
-    }
-    clickCantidadCuotas() {
-        //browser.takeScreenshot()
-        this.cantidadCuotas.waitForDisplayed({ timeout: 3000 });
-        this.cantidadCuotas.click();
     }
     get presionarContinuarButtonMedioPago(){
         return $('#continue');

@@ -14,6 +14,7 @@ class Producto_PO extends Base_PO {
         return cartBuyBtn; 
     }
     clickContinuarCarritoButton(){
+        browser.takeScreenshot()
         this.continuarCarritoButton.click();
     }
 }

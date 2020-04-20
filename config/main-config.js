@@ -17,6 +17,8 @@ module.exports = {
     piso: '2',
     apartamento: 'D',
     codigoPostal: '1417',
+    entreCalle1: 'Helguera',
+    entreCalle2: 'Argerich',
     cardNumber: '1234567890123456',
     cardExpirationMonth: '08',
     cardExpirationAnio: '2020',
