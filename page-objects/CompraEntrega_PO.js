@@ -80,5 +80,27 @@ class CompraEntrega_PO extends Base_PO {
     clickContinuarDomicilioButton(){
         this.continuarDomicilioButton.click();
     }
+    get personaAutorizada() {
+        return $('#chk-authorize-person');
+    }
+    clickPersonaAutorizada() {
+        this.personaAutorizada.click();
+    }
+    get nombreAutorizado1() {
+        return $('[name="firstName-0"]');
+    }
+    get apellidoAutorizado1() {
+        return $('[name="lastName-0"]');
+    }
+    get dniAutorizado1() {
+        return $('#dniAuto-0');
+    }
+    get generoAutorizado1() {
+        return $('.item-genero');
+    }
+    clickSelectGeneroAutorizado1() {
+        this.generoAutorizado1.click();
+    }
+ 
 }
 export default new CompraEntrega_PO()
