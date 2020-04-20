@@ -2,7 +2,7 @@ module.exports = {
     browser: 'chrome',
     baseUrl: 'http://www.garbarino.com',
     logLevel: 'info',
-    timeout: 200000,
+    timeout: 60000,
     firstName: 'Jonathan',
     lastName: 'Rojas',
     documento: '95562097',
