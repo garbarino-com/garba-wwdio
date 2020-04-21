@@ -24,7 +24,8 @@ exports.config = {
     specs: [
         //'./test/**/*.js'
         //'./test/**/compra-tarjeta-debito.js',
-        './test/**/compras.js'
+        './test/**/compras-sucursal.js',
+        './test/**/compras-domicilio.js'
     ],
     // Patterns to exclude.
     exclude: [
